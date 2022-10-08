@@ -1,5 +1,9 @@
 # What Can You Make
 
+## Developer Comment
+To reviewer,
+This was fun and interesting. I made my way well through the main TODOs. With 45 minutes until 4 hrs, I figured I could knock out some integration tests with puppeteer as a bonus, as I've had experience doing this before. But I failed to figure out the routing idiosyncracies quickly. In the last minutes I figured I could deploy to Heroku, and could not configure webpack properly for production. Alas, I reverted, as I've spent hours debugging each of these things before...Thanks for this opportunity!
+
 ## Installation
 
 Run:
