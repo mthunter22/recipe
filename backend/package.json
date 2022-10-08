@@ -11,7 +11,7 @@
     "lint": "eslint src/ --ext .ts",
     "start-dev": "nodemon -e ts --exec yarn dev-be",
     "dev-be": "node -r esbuild-register --inspect=0.0.0.0:9229 src/index.ts",
-    "start": "node server.js",
+    "start": "node ./src/index.ts",
     "heroku-postbuild": "cd ../frontend && yarn --dev && yarn build"
   },
   "dependencies": {
