@@ -3,6 +3,7 @@ import bodyParser from "body-parser"
 import http from "http"
 import { createAndConnectToServer } from "./db"
 import { searchMiddleware, recipeMiddleware } from "./routes"
+import path from "path"
 
 const appStartup = async (): Promise<void> => {
   await createAndConnectToServer()
@@ -18,7 +19,8 @@ const appStartup = async (): Promise<void> => {
   const port = process.env.PORT || 4000
   httpServer.listen(port, () => {
     console.log("now running on 4000")
-  })
+  });
+  app.use(express.static(path.resolve(__dirname, "../../frontend/src/frontend/dist")));
 }
 
 appStartup()

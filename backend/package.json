@@ -9,8 +9,10 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/ --ext .ts",
-    "start": "nodemon -e ts --exec yarn dev-be",
-    "dev-be": "node -r esbuild-register --inspect=0.0.0.0:9229 src/index.ts"
+    "start-dev": "nodemon -e ts --exec yarn dev-be",
+    "dev-be": "node -r esbuild-register --inspect=0.0.0.0:9229 src/index.ts",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "body-parser": "1.19.0",
