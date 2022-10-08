@@ -31,6 +31,7 @@ module.exports = {
     rules: [
       {
         test: /\.js?$/,
+        exclude: /node_modules/,
         include: [srcDir],
         loader: require.resolve("esbuild-loader"),
         options: {
